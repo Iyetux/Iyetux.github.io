@@ -148,6 +148,77 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2020/06/02/vuex-a-store-is-not-a-constructor/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Iyetux">
+      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/02/vuex-a-store-is-not-a-constructor/" class="post-title-link" itemprop="url">vuex.a.store is not a constructor</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2020-06-02 18:08:09" itemprop="dateCreated datePublished" datetime="2020-06-02T18:08:09+08:00">2020-06-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="控制台报错TypeError-WEBPACK-IMPORTED-MODULE-1-vuex-a-store-is-not-a-constructor"><a href="#控制台报错TypeError-WEBPACK-IMPORTED-MODULE-1-vuex-a-store-is-not-a-constructor" class="headerlink" title="控制台报错TypeError: WEBPACK_IMPORTED_MODULE_1_vuex.a.store is not a constructor"></a>控制台报错TypeError: <strong>WEBPACK_IMPORTED_MODULE_1_vuex</strong>.a.store is not a constructor</h1><blockquote>
+<p>这个报错的是_vuex2.default.store 不是一个构造函数因为在我们用vuex的时候需要将用到的actions，mutations模块最终导出，在导出的时候new Vuex.Store中的Store小写了，这里的一定要大写,就相当于我们在使用构造函数(类)的时候首字母要大写  </p>
+</blockquote>
+<p><em><em>错误案例</em></em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &#x27;vue&#x27;</span><br><span class="line">import Vuex from &#x27;vuex&#x27;</span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"></span><br><span class="line">const state = &#123;</span><br><span class="line">    count: 1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default new Vuex.store(&#123;</span><br><span class="line">    state</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><em><em>正确案例</em></em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &#x27;vue&#x27;</span><br><span class="line">import Vuex from &#x27;vuex&#x27;</span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)</span><br><span class="line"></span><br><span class="line">const state = &#123;</span><br><span class="line">    count: 1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default new Vuex.Store(&#123;</span><br><span class="line">    state</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
     <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2020/05/31/vue-init-%E4%B8%80%E7%9B%B4%E9%83%BD%E6%98%AFdownloading-template/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -282,7 +353,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">المقالات</span>
         </a>
       </div>
