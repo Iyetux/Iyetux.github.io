@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 7.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -84,7 +84,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -118,7 +118,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
 
   </li>
   </ul>
@@ -148,7 +148,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
-    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2022/11/28/css3%E8%B7%91%E9%A9%AC%E7%81%AF/">
+    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2024/08/26/%E7%8A%AF%E6%B5%91%E7%9A%84%E5%91%A8%E4%B8%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -162,7 +162,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/11/28/css3%E8%B7%91%E9%A9%AC%E7%81%AF/" class="post-title-link" itemprop="url">css3跑马灯</a>
+            <a href="/2024/08/26/%E7%8A%AF%E6%B5%91%E7%9A%84%E5%91%A8%E4%B8%80/" class="post-title-link" itemprop="url">犯浑的周一</a>
         </h2>
 
         <div class="post-meta">
@@ -170,10 +170,10 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">نُشر في</span>
               
 
-              <time title="Created: 2022-11-28 22:12:21 / Modified: 22:14:05" itemprop="dateCreated datePublished" datetime="2022-11-28T22:12:21+08:00">2022-11-28</time>
+              <time title="أُنشأ: 2024-08-26 09:28:43 / عُدل: 09:53:12" itemprop="dateCreated datePublished" datetime="2024-08-26T09:28:43+08:00">2024-08-26</time>
             </span>
 
           
@@ -187,14 +187,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="使用-css3-实现跑马灯效果"><a href="#使用-css3-实现跑马灯效果" class="headerlink" title="使用 css3 实现跑马灯效果"></a>使用 css3 实现跑马灯效果</h1><blockquote>
-<p>marqueue.html</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Docment<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">b</span>&gt;</span>实现跑马灯<span class="tag">&lt;/<span class="name">b</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">small</span>&gt;</span>Xu Xin Ran<span class="tag">&lt;/<span class="name">small</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>style.css</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  margin: 0;</span><br><span class="line">  padding: 0;</span><br><span class="line">  box-sizing: border-box;</span><br><span class="line">&#125;</span><br><span class="line">:root &#123;</span><br><span class="line">  --clr: #112434;</span><br><span class="line">  --b-cir1: rgb(183,140,247);</span><br><span class="line">  --b-cir2: rgb(255,124,148);</span><br><span class="line">&#125;</span><br><span class="line">body &#123;</span><br><span class="line">  width:100vw;</span><br><span class="line">  height:100vh;</span><br><span class="line">  background:var(--clr);</span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.container &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  width: 350px;</span><br><span class="line">  height: 400px;</span><br><span class="line">  background: #000;</span><br><span class="line">  border-radius: 24px;</span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  align-items: center;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line">.container::before &#123;</span><br><span class="line">  content: &quot;&quot;;</span><br><span class="line">  width: 350px;</span><br><span class="line">  height: 400px;</span><br><span class="line">  background: linear-gradient(transparent,transparent,var(--b-cir1));</span><br><span class="line">  position: absolute;</span><br><span class="line">  animation: myAnimate 4s linear infinite;</span><br><span class="line">  top: -50%;</span><br><span class="line">  left: 50%;</span><br><span class="line">  transform-origin: bottom left;</span><br><span class="line">&#125;</span><br><span class="line">.container::after &#123;</span><br><span class="line">  content: &quot;&quot;;</span><br><span class="line">  width: 350px;</span><br><span class="line">  height: 400px;</span><br><span class="line">  background: linear-gradient(var(--b-cir2),transparent,transparent);</span><br><span class="line">  position: absolute;</span><br><span class="line">  animation: myAnimate 4s linear infinite;</span><br><span class="line">  top: 50%;</span><br><span class="line">  left: -50%;</span><br><span class="line">  transform-origin: top right;</span><br><span class="line">&#125;</span><br><span class="line">@keyframes myAnimate &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    transform: rotate(0deg);</span><br><span class="line">  &#125;</span><br><span class="line">  100% &#123;</span><br><span class="line">    transform: rotate(360deg);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">.content &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  width: 342px;</span><br><span class="line">  height: 392px;</span><br><span class="line">  background: var(--clr);</span><br><span class="line">  border-radius:20px;</span><br><span class="line">  display:flex;</span><br><span class="line">  justify-content:center;</span><br><span class="line">  align-items:center;</span><br><span class="line">  flex-direction: column;</span><br><span class="line">  font-size: 2rem;</span><br><span class="line">  z-index:2;</span><br><span class="line">&#125;</span><br><span class="line">.content b&#123;</span><br><span class="line">  color: var(--b-cir1);</span><br><span class="line">&#125;</span><br><span class="line">.content small&#123;</span><br><span class="line">  color: var(--b-cir2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <p>今天周一，刚搬办公新址不久，就要搞什么周一早点名，真搞不懂别的都不用搬，甚至都没看到要什么早点名，而我们啥有意义或作用的都没有尽搞点虚的。真应征了那句话形式主义空大。<br>说起今天犯浑的三件事，主要还是大脑反应太慢了。<br>第一，早上按照地图路线规划，明明到了走过的路口，可是却咋呼着没按道路标识行驶，导致该右拐弯时差点错过了。急急忙荒的纠正过来，反向也打得很急，所以这是思路不清晰第一。<br>第二，行驶过一个右边有岔路口处，心里知道右转让直行，尽然碰到一个不怕死的，不让步说，还硬塞抢占我的道，这里的错误是不应该往左偏反向试图躲避，而应该握紧方向，减速停车。因为以上两点都是紧张状态下处理不当，要是平日车多，这一定是事故起因。<br>第三，早上上面小鬼领导问起同事去哪里了。没进过大脑就直接答应去吃早饭了。都已经是上班时间，我答去吃早饭，这不是摆明的坑队友，情商低吗？还在一根筋的询问同时为什么不能这样答，别人年龄比你小这么多，都意识到问题所在，自己无脑的回答，并且还无意识的反复询问，这不是低智商是什么？<br>看样子是我闲置太久了，本就反应慢的我，脑满肠肥的大脑都生锈了，一脑子的浆糊，做事，思考一根筋。</p>
 
       
     </div>
@@ -214,7 +207,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
-    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2022/11/28/Electron%E6%96%B0%E7%89%88CORS%E9%97%AE%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2024/08/26/%E5%85%8B%E6%8B%89%E5%85%8B%E4%BC%A0%E5%A5%87%E6%95%99%E5%B8%88%E7%9A%84%E8%A7%84%E5%88%99/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -228,7 +221,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/11/28/Electron%E6%96%B0%E7%89%88CORS%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">Untitled</a>
+            <a href="/2024/08/26/%E5%85%8B%E6%8B%89%E5%85%8B%E4%BC%A0%E5%A5%87%E6%95%99%E5%B8%88%E7%9A%84%E8%A7%84%E5%88%99/" class="post-title-link" itemprop="url">بدون عنوان</a>
         </h2>
 
         <div class="post-meta">
@@ -236,253 +229,9 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">نُشر في</span>
 
-              <time title="Created: 2022-11-28 22:10:43" itemprop="dateCreated datePublished" datetime="2022-11-28T22:10:43+08:00">2022-11-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Electron-跨域问题"><a href="#Electron-跨域问题" class="headerlink" title="Electron 跨域问题"></a>Electron 跨域问题</h1><h2 id="Electron8-后直接使用-webSecurity-false-无效-需要修改代码如下"><a href="#Electron8-后直接使用-webSecurity-false-无效-需要修改代码如下" class="headerlink" title="Electron8*后直接使用 webSecurity: false 无效.需要修改代码如下"></a>Electron8*后直接使用 webSecurity: false 无效.需要修改代码如下</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">mainWindow = <span class="keyword">new</span> <span class="title class_">BrowserWindow</span>(&#123;</span><br><span class="line">    <span class="attr">show</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">width</span>: <span class="number">1024</span>,</span><br><span class="line">    <span class="attr">height</span>: <span class="number">728</span>,</span><br><span class="line">    <span class="attr">icon</span>: <span class="title function_">getAssetPath</span>(<span class="string">&#x27;icon.png&#x27;</span>),</span><br><span class="line">    <span class="attr">webPreferences</span>: &#123;</span><br><span class="line">      <span class="attr">preload</span>: path.<span class="title function_">join</span>(__dirname, <span class="string">&#x27;preload.js&#x27;</span>),</span><br><span class="line">      <span class="comment">// 默认的允许CORS设置不能少</span></span><br><span class="line">      <span class="attr">webSecurity</span>: <span class="literal">false</span>,</span><br><span class="line">      <span class="attr">allowRunningInsecureContent</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="comment">// 额外需要新增设置</span></span><br><span class="line">app.<span class="property">commandLine</span>.<span class="title function_">appendSwitch</span>(<span class="string">&#x27;disable-features&#x27;</span>, <span class="string">&#x27;OutOfBlinkCors&#x27;</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="另新增内容与跨域无关可是了解学习ElectronAPI的调用-这里以customerSchema-privileges为例子"><a href="#另新增内容与跨域无关可是了解学习ElectronAPI的调用-这里以customerSchema-privileges为例子" class="headerlink" title="另新增内容与跨域无关可是了解学习ElectronAPI的调用.这里以customerSchema privileges为例子."></a>另新增内容与跨域无关可是了解学习ElectronAPI的调用.这里以customerSchema privileges为例子.</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; app, <span class="title class_">BrowserWindow</span>, shell, ipcMain, protocol &#125; <span class="keyword">from</span> <span class="string">&#x27;electron&#x27;</span>;</span><br><span class="line">protocol.<span class="title function_">registerSchemesAsPrivileged</span>([</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">scheme</span>: <span class="string">&#x27;app&#x27;</span>,</span><br><span class="line">    <span class="attr">privileges</span>: &#123;</span><br><span class="line">      <span class="attr">corsEnabled</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">bypassCSP</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
-    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2022/11/28/Hugo%E6%A1%86%E6%9E%B6go%E8%AF%AD%E8%A8%80%E7%89%88hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Iyetux">
-      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/11/28/Hugo%E6%A1%86%E6%9E%B6go%E8%AF%AD%E8%A8%80%E7%89%88hexo/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-11-28 22:10:43" itemprop="dateCreated datePublished" datetime="2022-11-28T22:10:43+08:00">2022-11-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Hugo框架go语言版hexo"><a href="#Hugo框架go语言版hexo" class="headerlink" title="Hugo框架go语言版hexo."></a>Hugo框架go语言版hexo.</h1><p><a href="gohugo.io">Hugo</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
-    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2022/11/28/React%20TinyMCE%20using%20modules%20import/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Iyetux">
-      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/11/28/React%20TinyMCE%20using%20modules%20import/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-11-28 22:10:43" itemprop="dateCreated datePublished" datetime="2022-11-28T22:10:43+08:00">2022-11-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="React-TinyMCE-using-modules-import"><a href="#React-TinyMCE-using-modules-import" class="headerlink" title="React TinyMCE using modules import"></a>React TinyMCE using modules import</h1><h2 id="1-安装相关依赖-当前案例使用的是TinyMCE5"><a href="#1-安装相关依赖-当前案例使用的是TinyMCE5" class="headerlink" title="1. 安装相关依赖(当前案例使用的是TinyMCE5+)"></a>1. 安装相关依赖(当前案例使用的是TinyMCE5+)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -S tinymce @tinymce/tinymce-react</span><br></pre></td></tr></table></figure>
-<h2 id="2-tsx组件代码"><a href="#2-tsx组件代码" class="headerlink" title="2. tsx组件代码"></a>2. tsx组件代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/tinymce&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/icons/default&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/themes/silver&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/plugins/paste&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/plugins/link&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/plugins/image&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/plugins/table&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/skins/ui/oxide/skin.min.css&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/skins/ui/oxide/content.min.css&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/skins/content/default/content.min.css&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Editor</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@tinymce/tinymce-react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">Login</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> [contentEditor, setContentEditor] = <span class="title function_">useState</span>();</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleEditorChange</span> = (<span class="params">content:any, editor:any</span>) =&gt; &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Content was updated:&#x27;</span>, content);</span><br><span class="line">    <span class="title function_">setContentEditor</span>(content);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Login page<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">Editor</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">         <span class="attr">initialValue</span>=<span class="string">&quot;&lt;p&gt;This is the initial content of the editor&lt;/p&gt;&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">         <span class="attr">init</span>=<span class="string">&#123;&#123;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">           <span class="attr">skin:</span> <span class="attr">false</span>,</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">           <span class="attr">content_css:</span> <span class="attr">false</span>,</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">           <span class="attr">height:</span> <span class="attr">500</span>,</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">           <span class="attr">menubar:</span> <span class="attr">false</span>,</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">           <span class="attr">plugins:</span> [</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">             &#x27;<span class="attr">link</span> <span class="attr">image</span>&#x27;,</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">             &#x27;<span class="attr">table</span> <span class="attr">paste</span>&#x27;</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">           ],</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">           <span class="attr">toolbar:</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">             `<span class="attr">undo</span> <span class="attr">redo</span> | <span class="attr">formatselect</span> | <span class="attr">bold</span> <span class="attr">italic</span> <span class="attr">backcolor</span> | </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">             <span class="attr">alignleft</span> <span class="attr">aligncenter</span> <span class="attr">alignright</span> <span class="attr">alignjustify</span> | </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">             <span class="attr">bullist</span> <span class="attr">numlist</span> <span class="attr">outdent</span> <span class="attr">indent</span> | <span class="attr">removeformat</span> | <span class="attr">help</span>`</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">         &#125;&#125;</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">         <span class="attr">value</span>=<span class="string">&#123;contentEditor&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">         <span class="attr">onEditorChange</span>=<span class="string">&#123;handleEditorChange&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">       /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
-    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2022/11/28/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Iyetux">
-      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/11/28/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-11-28 22:10:43" itemprop="dateCreated datePublished" datetime="2022-11-28T22:10:43+08:00">2022-11-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
-    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2022/11/28/%E5%85%8B%E6%8B%89%E5%85%8B%E4%BC%A0%E5%A5%87%E6%95%99%E5%B8%88%E7%9A%84%E8%A7%84%E5%88%99/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Iyetux">
-      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/11/28/%E5%85%8B%E6%8B%89%E5%85%8B%E4%BC%A0%E5%A5%87%E6%95%99%E5%B8%88%E7%9A%84%E8%A7%84%E5%88%99/" class="post-title-link" itemprop="url">Untitled</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-11-28 22:10:43" itemprop="dateCreated datePublished" datetime="2022-11-28T22:10:43+08:00">2022-11-28</time>
+              <time title="أُنشأ: 2024-08-26 08:25:45" itemprop="dateCreated datePublished" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
             </span>
 
           
@@ -502,7 +251,7 @@
 <h2 id="Rule-4-Discussion-Rules"><a href="#Rule-4-Discussion-Rules" class="headerlink" title="Rule 4: Discussion Rules"></a>Rule 4: Discussion Rules</h2><p>尊重别人的发言与想法。克拉克先生的办法是：“在讨论问题的时候，要对其他同学的评论、观点和想法表示尊重。要尽可能地这样说：“我同意约翰的观点，同时我也感到……”“我不同意沙拉的看法，尽管她抓住了问题的核心，但我觉得……”或者“我认为维可多的观察真是太精彩了，它让我意识到……”  </p>
 <h2 id="Rule-5-Do-Not-Brag"><a href="#Rule-5-Do-Not-Brag" class="headerlink" title="Rule 5: Do Not Brag"></a>Rule 5: Do Not Brag</h2><p>自己有什么好表现，不要炫耀，输给别人也不要生气。取而代之的是，你可以说一些诸如“我很享受这次比赛，而且很期待下次和你再比一比。”或者你可以说，“非常棒的比赛&#x2F;游戏。”又或者你可以保持沉默，但不要表现得很生气或者嘲讽对方。  </p>
 <h2 id="Rule-6-Conversation"><a href="#Rule-6-Conversation" class="headerlink" title="Rule 6: Conversation"></a>Rule 6: Conversation</h2><p>如果别人问你问题，你也回问他问题。这是一种非常礼貌的表达方式：这能让他们明白你对他们的兴趣和他们对你的兴趣一样多。  </p>
-<h2 id="Rule-7-Coughing-Sneezing-amp-Burping"><a href="#Rule-7-Coughing-Sneezing-amp-Burping" class="headerlink" title="Rule 7: Coughing, Sneezing &amp; Burping"></a>Rule 7: Coughing, Sneezing &amp; Burping</h2><p>打喷嚏、咳嗽都要说对不起.当你咳嗽、打喷嚏或打嗝时，需要适当的转过头去，并用整个手或手臂捂住你的嘴，用拳头捂住可不行。然后，你应该说，对不起。“Excuse me。”  </p>
+<h2 id="Rule-7-Coughing-Sneezing-Burping"><a href="#Rule-7-Coughing-Sneezing-Burping" class="headerlink" title="Rule 7: Coughing, Sneezing &amp; Burping"></a>Rule 7: Coughing, Sneezing &amp; Burping</h2><p>打喷嚏、咳嗽都要说对不起.当你咳嗽、打喷嚏或打嗝时，需要适当的转过头去，并用整个手或手臂捂住你的嘴，用拳头捂住可不行。然后，你应该说，对不起。“Excuse me。”  </p>
 <h2 id="Rule-8-Smacking-Your-Lips"><a href="#Rule-8-Smacking-Your-Lips" class="headerlink" title="Rule 8:Smacking Your Lips"></a>Rule 8:Smacking Your Lips</h2><p>不可以有不礼貌的小动作。不要咂嘴、发啧啧声、转眼珠，或做出对人不敬的手势。  </p>
 <h2 id="Rule-9-Say-Thank-You"><a href="#Rule-9-Say-Thank-You" class="headerlink" title="Rule 9: Say Thank You"></a>Rule 9: Say Thank You</h2><p>别人送你任何东西，都要说谢谢。如果对方不说谢谢，克拉克先生对待这种情况的办法是：毫不犹豫地收回礼物。  </p>
 <h2 id="Rule-10-Receiving-a-gift"><a href="#Rule-10-Receiving-a-gift" class="headerlink" title="Rule 10: Receiving a gift"></a>Rule 10: Receiving a gift</h2><p>接到奖品和礼物，不可以嫌弃。当别人赠送了你什么东西，不要说侮辱人的话，也不要给出关于礼物的负面评论或者暗示礼物不好。  </p>
@@ -517,7 +266,7 @@
 <h2 id="Rule-19-Complaining"><a href="#Rule-19-Complaining" class="headerlink" title="Rule 19: Complaining"></a>Rule 19: Complaining</h2><p>不要抱怨和叫苦.老师在指定作业的时候，不要叫苦；如果谁违反了，他就必须做两倍的作业。克拉克坚持这个严厉的惩罚，就是为了让孩子以积极进取的心态接受必须的完成的任务。克拉克老师认为：与其让布置的每一项作业（或必须完成的任务）都被抱怨，每一件应该完成的工作都充满了逆反情绪，还不如让他们做几次双倍的作业，从此以后在接受作业（和任务）的时候再也不会抱怨和发牢骚。  </p>
 <h2 id="Rule-20-The-Sub-Clause"><a href="#Rule-20-The-Sub-Clause" class="headerlink" title="Rule 20: The Sub Clause"></a>Rule 20: The Sub Clause</h2><p>别的老师来代课，也要守班规.这个细节的目的是为了培养孩子“无论有没有老板在身边，他们工作都是为了自己”，也就是培养自觉性。克拉克为此做了很多努力，苦口婆心的教导。  </p>
 <h2 id="Rule-21-Protocols"><a href="#Rule-21-Protocols" class="headerlink" title="Rule 21: Protocols"></a>Rule 21: Protocols</h2><p>课堂上发言，或起身，应该讲规矩.未经允许请勿离开座位。（例外）如果你生病了，可以立即离开。不要说话除非：你举起手来，我会叫你回答。我问你一个问题，你正在回答。休息或午餐时间。我在课堂上另有指示（比如在小组工作期间）。在上学之前把铅笔削好。你不能在9am-2:50pm期间使用铅笔刀。上学前处理好你的个人私事。总是有一本能让你安静下来读的书。这本书可以放在你的书桌里或者书桌上。如果你快读完了，就再准备一本！  </p>
-<h2 id="Rule-22-Water-amp-Food"><a href="#Rule-22-Water-amp-Food" class="headerlink" title="Rule 22: Water &amp; Food"></a>Rule 22: Water &amp; Food</h2><p>不可以上课上一半，起身去倒水.你甚至可以在自己的桌子上吃东西，只要别人没看到或者没听到你吃它（任何人只要把桌子搞得一团糟就会失去这一特权。）此外，当我们排队时，不要在任何饮水机前停留。嚼口香糖是违反校规的，嚼口香糖的学生会立即被拘留。除了课堂上的庆祝活动外，水是唯一允许在教室里喝的饮料。</p>
+<h2 id="Rule-22-Water-Food"><a href="#Rule-22-Water-Food" class="headerlink" title="Rule 22: Water &amp; Food"></a>Rule 22: Water &amp; Food</h2><p>不可以上课上一半，起身去倒水.你甚至可以在自己的桌子上吃东西，只要别人没看到或者没听到你吃它（任何人只要把桌子搞得一团糟就会失去这一特权。）此外，当我们排队时，不要在任何饮水机前停留。嚼口香糖是违反校规的，嚼口香糖的学生会立即被拘留。除了课堂上的庆祝活动外，水是唯一允许在教室里喝的饮料。</p>
 <h2 id="Rule-23-Learn-Names"><a href="#Rule-23-Learn-Names" class="headerlink" title="Rule 23: Learn Names"></a>Rule 23: Learn Names</h2><p>见到每个老师，都要说某某老师好.克拉克老师要求孩子们“要迅速记住全校老师的名字”，并在遇到的时候打招呼，同时还没忘记强调排队走路的时候除外，因为那时有“不许讲话”的纪律.克拉克老师希望学生们培养起良好的社交习惯，以便进入社会后“能主动了解周围的同事或邻居”，“并努力做到善意、有礼貌地对待别人。”  </p>
 <h2 id="Rule-24-The-Bathroom"><a href="#Rule-24-The-Bathroom" class="headerlink" title="Rule 24: The Bathroom"></a>Rule 24: The Bathroom</h2><p>注意洗手间的卫生，把身边的病原减少到最少.克拉克先生要求学生：必须冲厕所，如果按纽很脏就用手纸垫着。“己所不欲，勿施于人”，自己不愿意使用肮脏的小便器，就一定要冲洗干净自己用过的。</p>
 <h2 id="Rule-25-Look-Away"><a href="#Rule-25-Look-Away" class="headerlink" title="Rule 25: Look Away"></a>Rule 25: Look Away</h2><p>同学受罚的时候不要看着他，请看向别处.如果我或者学校里的其他老师在对学生说话或管教学生，不要盯着那个学生看。如果你遇到麻烦或受到斥责，你不希望别人盯着你看对吗？所以不要在这种情况下看别人。如果你是我正在交谈的学生，不要对正在看着你的学生生气或大惊小怪。你只需要让我知道，我会处理好情况的。“为了避免尴尬和因公开展示而引起的愤怒，我要保证孩子们理解和遵守这个规矩。”不做落井下石、幸灾乐祸的事，我还是那句话“己所不欲，勿施于人。”</p>
@@ -570,6 +319,396 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2024/08/26/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Iyetux">
+      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/08/26/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2024-08-26 08:25:45" itemprop="dateCreated datePublished" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2024/08/26/React%20TinyMCE%20using%20modules%20import/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Iyetux">
+      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/08/26/React%20TinyMCE%20using%20modules%20import/" class="post-title-link" itemprop="url">بدون عنوان</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2024-08-26 08:25:45" itemprop="dateCreated datePublished" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="React-TinyMCE-using-modules-import"><a href="#React-TinyMCE-using-modules-import" class="headerlink" title="React TinyMCE using modules import"></a>React TinyMCE using modules import</h1><h2 id="1-安装相关依赖-当前案例使用的是TinyMCE5"><a href="#1-安装相关依赖-当前案例使用的是TinyMCE5" class="headerlink" title="1. 安装相关依赖(当前案例使用的是TinyMCE5+)"></a>1. 安装相关依赖(当前案例使用的是TinyMCE5+)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -S tinymce @tinymce/tinymce-react</span><br></pre></td></tr></table></figure>
+<h2 id="2-tsx组件代码"><a href="#2-tsx组件代码" class="headerlink" title="2. tsx组件代码"></a>2. tsx组件代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span>, &#123; useState &#125; <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/tinymce&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/icons/default&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/themes/silver&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/plugins/paste&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/plugins/link&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/plugins/image&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/plugins/table&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/skins/ui/oxide/skin.min.css&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/skins/ui/oxide/content.min.css&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;tinymce/skins/content/default/content.min.css&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Editor</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;@tinymce/tinymce-react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">Login</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="keyword">const</span> [contentEditor, setContentEditor] = <span class="title function_">useState</span>();</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">handleEditorChange</span> = (<span class="params">content:any, editor:any</span>) =&gt; &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Content was updated:&#x27;</span>, content);</span><br><span class="line">    <span class="title function_">setContentEditor</span>(content);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Login page<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">Editor</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">         <span class="attr">initialValue</span>=<span class="string">&quot;&lt;p&gt;This is the initial content of the editor&lt;/p&gt;&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">         <span class="attr">init</span>=<span class="string">&#123;&#123;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">           <span class="attr">skin:</span> <span class="attr">false</span>,</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">           <span class="attr">content_css:</span> <span class="attr">false</span>,</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">           <span class="attr">height:</span> <span class="attr">500</span>,</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">           <span class="attr">menubar:</span> <span class="attr">false</span>,</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">           <span class="attr">plugins:</span> [</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">             &#x27;<span class="attr">link</span> <span class="attr">image</span>&#x27;,</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">             &#x27;<span class="attr">table</span> <span class="attr">paste</span>&#x27;</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">           ],</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">           <span class="attr">toolbar:</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">             `<span class="attr">undo</span> <span class="attr">redo</span> | <span class="attr">formatselect</span> | <span class="attr">bold</span> <span class="attr">italic</span> <span class="attr">backcolor</span> | </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">             <span class="attr">alignleft</span> <span class="attr">aligncenter</span> <span class="attr">alignright</span> <span class="attr">alignjustify</span> | </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">             <span class="attr">bullist</span> <span class="attr">numlist</span> <span class="attr">outdent</span> <span class="attr">indent</span> | <span class="attr">removeformat</span> | <span class="attr">help</span>`</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">         &#125;&#125;</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">         <span class="attr">value</span>=<span class="string">&#123;contentEditor&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">         <span class="attr">onEditorChange</span>=<span class="string">&#123;handleEditorChange&#125;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">       /&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2024/08/26/Hugo%E6%A1%86%E6%9E%B6go%E8%AF%AD%E8%A8%80%E7%89%88hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Iyetux">
+      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/08/26/Hugo%E6%A1%86%E6%9E%B6go%E8%AF%AD%E8%A8%80%E7%89%88hexo/" class="post-title-link" itemprop="url">بدون عنوان</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2024-08-26 08:25:45" itemprop="dateCreated datePublished" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Hugo框架go语言版hexo"><a href="#Hugo框架go语言版hexo" class="headerlink" title="Hugo框架go语言版hexo."></a>Hugo框架go语言版hexo.</h1><p><a href="gohugo.io">Hugo</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2024/08/26/Electron%E6%96%B0%E7%89%88CORS%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Iyetux">
+      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/08/26/Electron%E6%96%B0%E7%89%88CORS%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">بدون عنوان</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2024-08-26 08:25:45" itemprop="dateCreated datePublished" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Electron-跨域问题"><a href="#Electron-跨域问题" class="headerlink" title="Electron 跨域问题"></a>Electron 跨域问题</h1><h2 id="Electron8-后直接使用-webSecurity-false-无效-需要修改代码如下"><a href="#Electron8-后直接使用-webSecurity-false-无效-需要修改代码如下" class="headerlink" title="Electron8*后直接使用 webSecurity: false 无效.需要修改代码如下"></a>Electron8*后直接使用 webSecurity: false 无效.需要修改代码如下</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">mainWindow = <span class="keyword">new</span> <span class="title class_">BrowserWindow</span>(&#123;</span><br><span class="line">    <span class="attr">show</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">width</span>: <span class="number">1024</span>,</span><br><span class="line">    <span class="attr">height</span>: <span class="number">728</span>,</span><br><span class="line">    <span class="attr">icon</span>: <span class="title function_">getAssetPath</span>(<span class="string">&#x27;icon.png&#x27;</span>),</span><br><span class="line">    <span class="attr">webPreferences</span>: &#123;</span><br><span class="line">      <span class="attr">preload</span>: path.<span class="title function_">join</span>(__dirname, <span class="string">&#x27;preload.js&#x27;</span>),</span><br><span class="line">      <span class="comment">// 默认的允许CORS设置不能少</span></span><br><span class="line">      <span class="attr">webSecurity</span>: <span class="literal">false</span>,</span><br><span class="line">      <span class="attr">allowRunningInsecureContent</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="comment">// 额外需要新增设置</span></span><br><span class="line">app.<span class="property">commandLine</span>.<span class="title function_">appendSwitch</span>(<span class="string">&#x27;disable-features&#x27;</span>, <span class="string">&#x27;OutOfBlinkCors&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="另新增内容与跨域无关可是了解学习ElectronAPI的调用-这里以customerSchema-privileges为例子"><a href="#另新增内容与跨域无关可是了解学习ElectronAPI的调用-这里以customerSchema-privileges为例子" class="headerlink" title="另新增内容与跨域无关可是了解学习ElectronAPI的调用.这里以customerSchema privileges为例子."></a>另新增内容与跨域无关可是了解学习ElectronAPI的调用.这里以customerSchema privileges为例子.</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; app, <span class="title class_">BrowserWindow</span>, shell, ipcMain, protocol &#125; <span class="keyword">from</span> <span class="string">&#x27;electron&#x27;</span>;</span><br><span class="line">protocol.<span class="title function_">registerSchemesAsPrivileged</span>([</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">scheme</span>: <span class="string">&#x27;app&#x27;</span>,</span><br><span class="line">    <span class="attr">privileges</span>: &#123;</span><br><span class="line">      <span class="attr">corsEnabled</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">bypassCSP</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2023/07/05/arch-linux-wifi-connect/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Iyetux">
+      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/07/05/arch-linux-wifi-connect/" class="post-title-link" itemprop="url">arch linux wifi connect</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2023-07-05 21:33:22" itemprop="dateCreated datePublished" datetime="2023-07-05T21:33:22+08:00">2023-07-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>创建一个 .network 文件，例如 &#x2F;etc&#x2F;systemd&#x2F;network&#x2F;wireless.network，其中包含以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Match]</span><br><span class="line">Name=wlan0</span><br><span class="line"></span><br><span class="line">[Network]</span><br><span class="line">DHCP=yes</span><br><span class="line"></span><br><span class="line">[DHCP]</span><br><span class="line">RouteMetric=10</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建一个 .netdev 文件，例如 &#x2F;etc&#x2F;systemd&#x2F;network&#x2F;wireless.netdev，其中包含以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[NetDev]</span><br><span class="line">Name=wlan0</span><br><span class="line">Kind=nl80211</span><br><span class="line"></span><br><span class="line">[Wireless]</span><br><span class="line">Mode=infrastructure</span><br><span class="line">SSID=your_SSID</span><br><span class="line">KeyManagement=wpa-psk</span><br><span class="line">AuthenticatedEncryption=CCMP</span><br><span class="line">UnauthenticatedEncryption=TKIP</span><br><span class="line">PreSharedKey=your_password</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启用 systemd-networkd 服务：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># systemctl enable systemd-networkd.service</span><br><span class="line"># systemctl start systemd-networkd.service</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2022/11/28/css3%E8%B7%91%E9%A9%AC%E7%81%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Iyetux">
+      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/11/28/css3%E8%B7%91%E9%A9%AC%E7%81%AF/" class="post-title-link" itemprop="url">css3跑马灯</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2022-11-28 22:12:21" itemprop="dateCreated datePublished" datetime="2022-11-28T22:12:21+08:00">2022-11-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="使用-css3-实现跑马灯效果"><a href="#使用-css3-实现跑马灯效果" class="headerlink" title="使用 css3 实现跑马灯效果"></a>使用 css3 实现跑马灯效果</h1><blockquote>
+<p>marqueue.html</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Docment<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">b</span>&gt;</span>实现跑马灯<span class="tag">&lt;/<span class="name">b</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">small</span>&gt;</span>Xu Xin Ran<span class="tag">&lt;/<span class="name">small</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>style.css</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  margin: 0;</span><br><span class="line">  padding: 0;</span><br><span class="line">  box-sizing: border-box;</span><br><span class="line">&#125;</span><br><span class="line">:root &#123;</span><br><span class="line">  --clr: #112434;</span><br><span class="line">  --b-cir1: rgb(183,140,247);</span><br><span class="line">  --b-cir2: rgb(255,124,148);</span><br><span class="line">&#125;</span><br><span class="line">body &#123;</span><br><span class="line">  width:100vw;</span><br><span class="line">  height:100vh;</span><br><span class="line">  background:var(--clr);</span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.container &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  width: 350px;</span><br><span class="line">  height: 400px;</span><br><span class="line">  background: #000;</span><br><span class="line">  border-radius: 24px;</span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  align-items: center;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line">.container::before &#123;</span><br><span class="line">  content: &quot;&quot;;</span><br><span class="line">  width: 350px;</span><br><span class="line">  height: 400px;</span><br><span class="line">  background: linear-gradient(transparent,transparent,var(--b-cir1));</span><br><span class="line">  position: absolute;</span><br><span class="line">  animation: myAnimate 4s linear infinite;</span><br><span class="line">  top: -50%;</span><br><span class="line">  left: 50%;</span><br><span class="line">  transform-origin: bottom left;</span><br><span class="line">&#125;</span><br><span class="line">.container::after &#123;</span><br><span class="line">  content: &quot;&quot;;</span><br><span class="line">  width: 350px;</span><br><span class="line">  height: 400px;</span><br><span class="line">  background: linear-gradient(var(--b-cir2),transparent,transparent);</span><br><span class="line">  position: absolute;</span><br><span class="line">  animation: myAnimate 4s linear infinite;</span><br><span class="line">  top: 50%;</span><br><span class="line">  left: -50%;</span><br><span class="line">  transform-origin: top right;</span><br><span class="line">&#125;</span><br><span class="line">@keyframes myAnimate &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    transform: rotate(0deg);</span><br><span class="line">  &#125;</span><br><span class="line">  100% &#123;</span><br><span class="line">    transform: rotate(360deg);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">.content &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  width: 342px;</span><br><span class="line">  height: 392px;</span><br><span class="line">  background: var(--clr);</span><br><span class="line">  border-radius:20px;</span><br><span class="line">  display:flex;</span><br><span class="line">  justify-content:center;</span><br><span class="line">  align-items:center;</span><br><span class="line">  flex-direction: column;</span><br><span class="line">  font-size: 2rem;</span><br><span class="line">  z-index:2;</span><br><span class="line">&#125;</span><br><span class="line">.content b&#123;</span><br><span class="line">  color: var(--b-cir1);</span><br><span class="line">&#125;</span><br><span class="line">.content small&#123;</span><br><span class="line">  color: var(--b-cir2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
     <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2021/11/11/%E7%88%B6%E4%BA%B2%E7%9A%84%E8%B4%A3%E4%BB%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -592,16 +731,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">نُشر في</span>
 
-              <time title="Created: 2021-11-11 20:30:39" itemprop="dateCreated datePublished" datetime="2021-11-11T20:30:39+08:00">2021-11-11</time>
+              <time title="أُنشأ: 2021-11-11 20:30:39" itemprop="dateCreated datePublished" datetime="2021-11-11T20:30:39+08:00">2021-11-11</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-11-28 22:10:43" itemprop="dateModified" datetime="2022-11-28T22:10:43+08:00">2022-11-28</time>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -657,16 +796,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">نُشر في</span>
 
-              <time title="Created: 2021-10-07 22:41:46" itemprop="dateCreated datePublished" datetime="2021-10-07T22:41:46+08:00">2021-10-07</time>
+              <time title="أُنشأ: 2021-10-07 22:41:46" itemprop="dateCreated datePublished" datetime="2021-10-07T22:41:46+08:00">2021-10-07</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-11-28 22:10:43" itemprop="dateModified" datetime="2022-11-28T22:10:43+08:00">2022-11-28</time>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -680,7 +819,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="sorin-x2F-prezto配置笔记"><a href="#sorin-x2F-prezto配置笔记" class="headerlink" title="sorin&#x2F;prezto配置笔记"></a>sorin&#x2F;prezto配置笔记</h1><p>sorin&#x2F;prezto是zsh的主题插件跟ohmyzsh类似.<br>由于是github上的项目所以可以用gitee下载,下面记录的操作都是针对gitee的操作.</p>
+          <h1 id="sorin-prezto配置笔记"><a href="#sorin-prezto配置笔记" class="headerlink" title="sorin&#x2F;prezto配置笔记"></a>sorin&#x2F;prezto配置笔记</h1><p>sorin&#x2F;prezto是zsh的主题插件跟ohmyzsh类似.<br>由于是github上的项目所以可以用gitee下载,下面记录的操作都是针对gitee的操作.</p>
 <ol>
 <li>安装zsh</li>
 <li>配置gitee的github下载地址.<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/sorin-ionescu/prezto.git</span><br></pre></td></tr></table></figure></li>
@@ -703,141 +842,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
-    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2021/09/19/%E7%86%8A%E5%93%A5%E7%81%B0%E5%93%A5%E6%88%91%E5%A4%A7%E6%84%8F%E4%BA%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Iyetux">
-      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/19/%E7%86%8A%E5%93%A5%E7%81%B0%E5%93%A5%E6%88%91%E5%A4%A7%E6%84%8F%E4%BA%86/" class="post-title-link" itemprop="url">熊哥灰哥我大意了</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-09-19 21:54:54" itemprop="dateCreated datePublished" datetime="2021-09-19T21:54:54+08:00">2021-09-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-11-28 22:10:43" itemprop="dateModified" datetime="2022-11-28T22:10:43+08:00">2022-11-28</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>本事中秋团圆日。没曾想却此恨绵绵无绝期。</p>
-<p>感谢这段时间的陪伴，是二位给我们一家带来了生机与乐趣。虽然，我们不同类，甚至想尽法子取乐自己，可是你们都没有嫌弃，甚至排斥。无论条件好坏，你们都是安于过自己的生活。生活得那么朴实，那么有规律。虽然，你们有时一惊一乍，可是你们还是那么的淳朴憨厚。<br>可是没曾想就这么几个小时的时间就与你们永远分离了。<br>我真是无心之过，真的是想着别洗澡让你们着凉了。可是，就这一粗略的举动，就亲手送走了你们。<br>悼念：金丝熊、侏儒灰。愿你们来世幸福快乐。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
-    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2021/09/06/%E6%90%AC%E5%AE%B6%E4%BA%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Iyetux">
-      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/06/%E6%90%AC%E5%AE%B6%E4%BA%86/" class="post-title-link" itemprop="url">搬家了</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-09-06 22:43:55" itemprop="dateCreated datePublished" datetime="2021-09-06T22:43:55+08:00">2021-09-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-11-28 22:10:43" itemprop="dateModified" datetime="2022-11-28T22:10:43+08:00">2022-11-28</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>时间 2021 年 9 月 1 日随着长沙疫情慢慢再次回归到平稳状态，社会的一切运作又回到了自己的轨道。中学开学也在有条不紊的如期进行。这下终于要搬到一个不用低头就能走到窗边的房子了。唉！人这一生，总眼看着别人过得是那么的轻松，而自己总是在忙碌，而啥都没有。告诫自己知足常乐，可是什么叫知足？人不奋发图强，难道苟且一生的活法，能对得起这朝晖吗？可是，自己真没有头绪怎么样才能积累金钱呢？每天坐着车，看着那些司机，有男有女，车有豪车也有代步的，而我却还是公共出行，当然也有同行人，不过人家是低碳生活，而我是买不起。每天就在为钱发愁。写到这里真不知道怎么往下编了。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="الصفحة التالية"></i></a>
   </nav>
 
 
@@ -881,10 +889,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          المحتويات
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          عام
         </li>
       </ul>
 
@@ -903,13 +911,13 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">19</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">المقالات</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
         <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">الوسوم</span>
       </div>
   </nav>
 </div>
@@ -935,13 +943,13 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Iyetux</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
         
