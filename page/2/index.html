@@ -84,7 +84,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح">
+    <div class="toggle" aria-label="Navigationsleiste an/ausschalten">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -113,12 +113,12 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Startseite</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archiv</a>
 
   </li>
   </ul>
@@ -148,6 +148,78 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2022/11/28/css3%E8%B7%91%E9%A9%AC%E7%81%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Iyetux">
+      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/11/28/css3%E8%B7%91%E9%A9%AC%E7%81%AF/" class="post-title-link" itemprop="url">css3跑马灯</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
+
+              <time title="Erstellt: 2022-11-28 22:12:21" itemprop="dateCreated datePublished" datetime="2022-11-28T22:12:21+08:00">2022-11-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="使用-css3-实现跑马灯效果"><a href="#使用-css3-实现跑马灯效果" class="headerlink" title="使用 css3 实现跑马灯效果"></a>使用 css3 实现跑马灯效果</h1><blockquote>
+<p>marqueue.html</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Docment<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">b</span>&gt;</span>实现跑马灯<span class="tag">&lt;/<span class="name">b</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">small</span>&gt;</span>Xu Xin Ran<span class="tag">&lt;/<span class="name">small</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>style.css</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  margin: 0;</span><br><span class="line">  padding: 0;</span><br><span class="line">  box-sizing: border-box;</span><br><span class="line">&#125;</span><br><span class="line">:root &#123;</span><br><span class="line">  --clr: #112434;</span><br><span class="line">  --b-cir1: rgb(183,140,247);</span><br><span class="line">  --b-cir2: rgb(255,124,148);</span><br><span class="line">&#125;</span><br><span class="line">body &#123;</span><br><span class="line">  width:100vw;</span><br><span class="line">  height:100vh;</span><br><span class="line">  background:var(--clr);</span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.container &#123;</span><br><span class="line">  position: relative;</span><br><span class="line">  width: 350px;</span><br><span class="line">  height: 400px;</span><br><span class="line">  background: #000;</span><br><span class="line">  border-radius: 24px;</span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  align-items: center;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line">.container::before &#123;</span><br><span class="line">  content: &quot;&quot;;</span><br><span class="line">  width: 350px;</span><br><span class="line">  height: 400px;</span><br><span class="line">  background: linear-gradient(transparent,transparent,var(--b-cir1));</span><br><span class="line">  position: absolute;</span><br><span class="line">  animation: myAnimate 4s linear infinite;</span><br><span class="line">  top: -50%;</span><br><span class="line">  left: 50%;</span><br><span class="line">  transform-origin: bottom left;</span><br><span class="line">&#125;</span><br><span class="line">.container::after &#123;</span><br><span class="line">  content: &quot;&quot;;</span><br><span class="line">  width: 350px;</span><br><span class="line">  height: 400px;</span><br><span class="line">  background: linear-gradient(var(--b-cir2),transparent,transparent);</span><br><span class="line">  position: absolute;</span><br><span class="line">  animation: myAnimate 4s linear infinite;</span><br><span class="line">  top: 50%;</span><br><span class="line">  left: -50%;</span><br><span class="line">  transform-origin: top right;</span><br><span class="line">&#125;</span><br><span class="line">@keyframes myAnimate &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    transform: rotate(0deg);</span><br><span class="line">  &#125;</span><br><span class="line">  100% &#123;</span><br><span class="line">    transform: rotate(360deg);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">.content &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  width: 342px;</span><br><span class="line">  height: 392px;</span><br><span class="line">  background: var(--clr);</span><br><span class="line">  border-radius:20px;</span><br><span class="line">  display:flex;</span><br><span class="line">  justify-content:center;</span><br><span class="line">  align-items:center;</span><br><span class="line">  flex-direction: column;</span><br><span class="line">  font-size: 2rem;</span><br><span class="line">  z-index:2;</span><br><span class="line">&#125;</span><br><span class="line">.content b&#123;</span><br><span class="line">  color: var(--b-cir1);</span><br><span class="line">&#125;</span><br><span class="line">.content small&#123;</span><br><span class="line">  color: var(--b-cir2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
     <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2021/11/11/%E7%88%B6%E4%BA%B2%E7%9A%84%E8%B4%A3%E4%BB%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -170,16 +242,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="أُنشأ: 2021-11-11 20:30:39" itemprop="dateCreated datePublished" datetime="2021-11-11T20:30:39+08:00">2021-11-11</time>
+              <time title="Erstellt: 2021-11-11 20:30:39" itemprop="dateCreated datePublished" datetime="2021-11-11T20:30:39+08:00">2021-11-11</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">عُدل في</span>
-                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -235,16 +307,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="أُنشأ: 2021-10-07 22:41:46" itemprop="dateCreated datePublished" datetime="2021-10-07T22:41:46+08:00">2021-10-07</time>
+              <time title="Erstellt: 2021-10-07 22:41:46" itemprop="dateCreated datePublished" datetime="2021-10-07T22:41:46+08:00">2021-10-07</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">عُدل في</span>
-                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -307,16 +379,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="أُنشأ: 2021-09-19 21:54:54" itemprop="dateCreated datePublished" datetime="2021-09-19T21:54:54+08:00">2021-09-19</time>
+              <time title="Erstellt: 2021-09-19 21:54:54" itemprop="dateCreated datePublished" datetime="2021-09-19T21:54:54+08:00">2021-09-19</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">عُدل في</span>
-                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -373,16 +445,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="أُنشأ: 2021-09-06 22:43:55" itemprop="dateCreated datePublished" datetime="2021-09-06T22:43:55+08:00">2021-09-06</time>
+              <time title="Erstellt: 2021-09-06 22:43:55" itemprop="dateCreated datePublished" datetime="2021-09-06T22:43:55+08:00">2021-09-06</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">عُدل في</span>
-                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -438,16 +510,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="أُنشأ: 2021-05-27 22:28:11" itemprop="dateCreated datePublished" datetime="2021-05-27T22:28:11+08:00">2021-05-27</time>
+              <time title="Erstellt: 2021-05-27 22:28:11" itemprop="dateCreated datePublished" datetime="2021-05-27T22:28:11+08:00">2021-05-27</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">عُدل في</span>
-                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -503,16 +575,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="أُنشأ: 2021-03-14 16:44:26" itemprop="dateCreated datePublished" datetime="2021-03-14T16:44:26+08:00">2021-03-14</time>
+              <time title="Erstellt: 2021-03-14 16:44:26" itemprop="dateCreated datePublished" datetime="2021-03-14T16:44:26+08:00">2021-03-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">عُدل في</span>
-                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -568,16 +640,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="أُنشأ: 2020-10-04 17:20:22" itemprop="dateCreated datePublished" datetime="2020-10-04T17:20:22+08:00">2020-10-04</time>
+              <time title="Erstellt: 2020-10-04 17:20:22" itemprop="dateCreated datePublished" datetime="2020-10-04T17:20:22+08:00">2020-10-04</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">عُدل في</span>
-                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -656,16 +728,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="أُنشأ: 2020-09-28 20:02:52" itemprop="dateCreated datePublished" datetime="2020-09-28T20:02:52+08:00">2020-09-28</time>
+              <time title="Erstellt: 2020-09-28 20:02:52" itemprop="dateCreated datePublished" datetime="2020-09-28T20:02:52+08:00">2020-09-28</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">عُدل في</span>
-                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -768,16 +840,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">نُشر في</span>
+              <span class="post-meta-item-text">Veröffentlicht am</span>
 
-              <time title="أُنشأ: 2020-09-12 23:09:08" itemprop="dateCreated datePublished" datetime="2020-09-12T23:09:08+08:00">2020-09-12</time>
+              <time title="Erstellt: 2020-09-12 23:09:08" itemprop="dateCreated datePublished" datetime="2020-09-12T23:09:08+08:00">2020-09-12</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">عُدل في</span>
-                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">Bearbeitet am</span>
+                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -814,80 +886,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
-    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2020/07/04/%E4%BB%8E%E6%96%B0%E5%9B%9E%E5%88%B0%E7%A4%BE%E4%BC%9A/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Iyetux">
-      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/04/%E4%BB%8E%E6%96%B0%E5%9B%9E%E5%88%B0%E7%A4%BE%E4%BC%9A/" class="post-title-link" itemprop="url">从新回到社会</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">نُشر في</span>
-
-              <time title="أُنشأ: 2020-07-04 17:25:48" itemprop="dateCreated datePublished" datetime="2020-07-04T17:25:48+08:00">2020-07-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">عُدل في</span>
-                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><em><strong>生活充满随机性,虽然很反感这种不确定性，可是又不得不一次一次的面对它，因为你还「活着」。你必须面对生活，试着找到问题点，并且慢慢改变它，使它能按照你的意愿发展。因为想找出问题，所以有了此日志的目的，记录当下的内心所想以及日常事物，为以后追溯问题提供日志记录。</strong></em><br>现如今已经2020年下半年了。回想起家蹲的日子已经过去了9个月，这日子人的心态和思想都是在不停的自责、懊恼、颓废中艰难的过。都说高智商的人能在看待一件事情或一个问题上有至少多种不同的角度分析。而我是那种事后诸葛亮。在事情发生的时候IQ为0只知道冲动，而事后虽能自我安慰找到问题，确实总是犯同样的问题一错再错悔恨不已。</p>
-<h1 id="家里蹲的起因"><a href="#家里蹲的起因" class="headerlink" title="家里蹲的起因"></a>家里蹲的起因</h1><p>因为公司主管无缘由的辞退，自己认为事情都做好了份内的事，是主管不合理的进度安排，以及主管的纸上谈兵，使我一度失控，当面顶撞主管，所以最终被炒鱿鱼。当时觉得理直气壮，可现在回想起来，自己做错了。首先主管能坐到那个位置说明他有过人之处，但人无完人或许我觉得的无能只是片面看待一个人，或许真的是能力不高，可是放到全局或许对于工程的管理能力并不是当前公司所必须的，公司或许只是需要一个懂技术，能随便瞎逼逼忽悠客户就行的人。其次虽然不懂技术的主管将我安排到一个我不擅长的领域，我不能自由控制自己的使用价值。可是，这并不代表我的发展也被控制了。不擅长的领域，我可以有机会接触并且扩大自己的知识面，可以深挖领域的潜能，提高自己思想领悟的高度。可是，我选择了满足现状，随心随性选择了得过且过，因此虽然入了门，可是掌握得并不深，以至于后来发展到跟主管争执时，只知道说不合理，可是对于什么合理自己又说不出一个所以然来。_<strong>「做一件事无论开始是否喜欢，既然开始做了那就要做到最好，不然又何必开始呢？」</strong>_</p>
-<h1 id="无奈的尝试"><a href="#无奈的尝试" class="headerlink" title="无奈的尝试"></a>无奈的尝试</h1><p>自己冲动辞职可是日子还是得过毕竟上有老下有小。从业道路上的不顺，所以想着转业吧！换个环境，换条路走走看。可是自己没有人脉，之前从业又并没有做过多的业务积累，想转业得从零开始，年势已高转业谈何容易。机缘巧合下开始合伙做卖货渠道商。几年前有过亲生创业经历，可是最终总结是自身能力过于单一，而创业讲究是综合能力。因此，这次合伙发起人并不是我，我是被家人硬拉下水的，因为不做又能做啥呢？可是，就合伙人的能力与执行力，店铺开业那一天，其实我就看到了关张的情形。如果人真的有来生，真的要告诫自己。伴侣选择真的要慎重，需要长远考虑是否真的和自己是互补，否则不仅耽误对方，最重要的是要影响自己一生。_<strong>「这里推荐<a target="_blank" rel="noopener" href="http://hawstein.com/2020/02/17/be-an-indie-hacker-for-613-days/">《不上班的 613 天》</a>做事情要抓住重点，不要本末倒置将重心放到了细枝末节上。例如：做产品应该让产品尽早的面向客户获取反馈，而不是注册公司如何走商业流程。」</strong>_</p>
-<h1 id="混吃等死，麻木的生活是自己的选择"><a href="#混吃等死，麻木的生活是自己的选择" class="headerlink" title="混吃等死，麻木的生活是自己的选择"></a>混吃等死，麻木的生活是自己的选择</h1><p>一场疫情使得原本就不牢靠的合伙关系彻底崩塌，合伙人纷纷要求撤资止损。可是，家人的顽固最终选择全盘接手。而我也就成了那个每天起床、守店、吃喝拉撒、睡觉的行尸走肉，给自己唯一的指令就是混吃等死的人。单调而乏味的事务，曾一度有过轻生的想法，可是胆小懦弱的我也就想想罢了，真那么有勇气又怎么会弄得今日的地步呢！现在回想起来，等死期间哪怕多看点书，或者给自己充电，做点对自己有意义的事情，都比混吃等死要好。不是只能过什么样的生活，而是你选择过程什么样？_<strong>「生活并不是不可改变的，而是你何时做出了何种改变，以此你的生活也会随之改变。」</strong>_</p>
-<h1 id="看清楚路"><a href="#看清楚路" class="headerlink" title="看清楚路"></a>看清楚路</h1><p>机械化的日子一天一天的持续着看不到尽头，麻木的大脑也早就彻底的失去了改变的意识。虽然大脑没有想法如何突破改变，可是心中还是抱有那么一丝幻想，期望能走出困境，因此一直苟活着。进点货物，完全没有经营理念和意向的人、甚至根本不懂商品，尽然能听从他人指挥去市场进购商品倒卖。当然，大脑都已经麻木了，所以做起事来也是机械化的。一个生活小区，虽然居住多年，可是人员都不了解，并且商业潜力都没有分析过，就选择进购商品倒卖。所以还是那句话，有能力选择伴侣慎重，没能力想我一样不要祸害他人，直接单身真的是造福社会。_<strong>「智商用来判断对错，情商高会懂得拒绝，逆商也要看清楚方向，不然到头来选错了路，可是还是听之认知随波逐流，最终发现无论你多么抗压，也会觉得自己越活越累，苟延残喘。」</strong>_</p>
-<h1 id="随机性"><a href="#随机性" class="headerlink" title="随机性"></a>随机性</h1><p>上天眷顾每一个人，只是人太多轮到你需要时间，只要你还活着那就有希望。（当然有些人等到死或许都没看到希望，那也只能告诉自己人太多了还没轮到你。）当然，机遇也可以自己创造，那就是通过不屑的努力和拼搏，来提高你的名次，使得上天提前眷顾你。可是，这种艰辛不是一般人能坚持的，所以成功的人不多。就在自己觉得麻木毫无生趣时，多年没有联系过的友人，向我提供了一则聘用信息，这道曙光直照心房，让蒙尘已久的内心死灰复燃。恨不得立马跳脱，直奔希望。可是，往往好事情不会等着你。因此，做好基础心里建设，降低心里预期尤为重要。目前，已经成功入职。可是，感觉看不到希望，因为自己还没能找准方向。刚开始就有点打退堂鼓了，可是存在选择吗？不存在。现在是没得选择，因此强迫自己钉下来，将当前的环境当做熔炉，自己在熔炉里重塑。这回一定要看清楚每一步，虽然前面30年活成了这个鸟样，可以说完全没有了生趣。可是毕竟还苟活着，那么继续活下去未来十年、未来人生是不是就这样了还为可知。生命不熄，改变不止。虽然人生多变，指不定明天会多发突变，可是好好给自己安排下，多阅读多思考。希望十年后的自己看到这会不后悔自己的决定。_<strong>「从降世命数其实已经就定了，能活多久、拥有多大的财富、命运坎坷程度，其实一切早就有了定数，只是有些人通过不断突破追求，真正从内心发现了生命的价值与奥义。而我还在摸索中，让自己去理解，明白这世间的一切事物。」</strong>_</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="الصفحة السابقة"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="الصفحة التالية"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Vorherige Seite"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Nächste Seite"></i></a>
   </nav>
 
 
@@ -931,10 +933,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          المحتويات
+          Inhaltsverzeichnis
         </li>
         <li class="sidebar-nav-overview">
-          عام
+          Übersicht
         </li>
       </ul>
 
@@ -953,13 +955,13 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">23</span>
-          <span class="site-state-item-name">المقالات</span>
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">Artikel</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
         <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">الوسوم</span>
+        <span class="site-state-item-name">schlagwörter</span>
       </div>
   </nav>
 </div>
@@ -991,7 +993,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Iyetux</span>
 </div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
         
