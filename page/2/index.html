@@ -84,7 +84,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Navigationsleiste an/ausschalten">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -113,12 +113,12 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Startseite</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archiv</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
 
   </li>
   </ul>
@@ -148,6 +148,80 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
+    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2023/07/05/arch-linux-wifi-connect/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Iyetux">
+      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/07/05/arch-linux-wifi-connect/" class="post-title-link" itemprop="url">arch linux wifi connect</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2023-07-05 21:33:22" itemprop="dateCreated datePublished" datetime="2023-07-05T21:33:22+08:00">2023-07-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>创建一个 .network 文件，例如 &#x2F;etc&#x2F;systemd&#x2F;network&#x2F;wireless.network，其中包含以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Match]</span><br><span class="line">Name=wlan0</span><br><span class="line"></span><br><span class="line">[Network]</span><br><span class="line">DHCP=yes</span><br><span class="line"></span><br><span class="line">[DHCP]</span><br><span class="line">RouteMetric=10</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建一个 .netdev 文件，例如 &#x2F;etc&#x2F;systemd&#x2F;network&#x2F;wireless.netdev，其中包含以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[NetDev]</span><br><span class="line">Name=wlan0</span><br><span class="line">Kind=nl80211</span><br><span class="line"></span><br><span class="line">[Wireless]</span><br><span class="line">Mode=infrastructure</span><br><span class="line">SSID=your_SSID</span><br><span class="line">KeyManagement=wpa-psk</span><br><span class="line">AuthenticatedEncryption=CCMP</span><br><span class="line">UnauthenticatedEncryption=TKIP</span><br><span class="line">PreSharedKey=your_password</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启用 systemd-networkd 服务：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># systemctl enable systemd-networkd.service</span><br><span class="line"># systemctl start systemd-networkd.service</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
     <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2022/11/28/css3%E8%B7%91%E9%A9%AC%E7%81%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -170,16 +244,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">نُشر في</span>
 
-              <time title="Erstellt: 2022-11-28 22:12:21" itemprop="dateCreated datePublished" datetime="2022-11-28T22:12:21+08:00">2022-11-28</time>
+              <time title="أُنشأ: 2022-11-28 22:12:21" itemprop="dateCreated datePublished" datetime="2022-11-28T22:12:21+08:00">2022-11-28</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -242,16 +316,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">نُشر في</span>
 
-              <time title="Erstellt: 2021-11-11 20:30:39" itemprop="dateCreated datePublished" datetime="2021-11-11T20:30:39+08:00">2021-11-11</time>
+              <time title="أُنشأ: 2021-11-11 20:30:39" itemprop="dateCreated datePublished" datetime="2021-11-11T20:30:39+08:00">2021-11-11</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -307,16 +381,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">نُشر في</span>
 
-              <time title="Erstellt: 2021-10-07 22:41:46" itemprop="dateCreated datePublished" datetime="2021-10-07T22:41:46+08:00">2021-10-07</time>
+              <time title="أُنشأ: 2021-10-07 22:41:46" itemprop="dateCreated datePublished" datetime="2021-10-07T22:41:46+08:00">2021-10-07</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -379,16 +453,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">نُشر في</span>
 
-              <time title="Erstellt: 2021-09-19 21:54:54" itemprop="dateCreated datePublished" datetime="2021-09-19T21:54:54+08:00">2021-09-19</time>
+              <time title="أُنشأ: 2021-09-19 21:54:54" itemprop="dateCreated datePublished" datetime="2021-09-19T21:54:54+08:00">2021-09-19</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -445,16 +519,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">نُشر في</span>
 
-              <time title="Erstellt: 2021-09-06 22:43:55" itemprop="dateCreated datePublished" datetime="2021-09-06T22:43:55+08:00">2021-09-06</time>
+              <time title="أُنشأ: 2021-09-06 22:43:55" itemprop="dateCreated datePublished" datetime="2021-09-06T22:43:55+08:00">2021-09-06</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -510,16 +584,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">نُشر في</span>
 
-              <time title="Erstellt: 2021-05-27 22:28:11" itemprop="dateCreated datePublished" datetime="2021-05-27T22:28:11+08:00">2021-05-27</time>
+              <time title="أُنشأ: 2021-05-27 22:28:11" itemprop="dateCreated datePublished" datetime="2021-05-27T22:28:11+08:00">2021-05-27</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -575,16 +649,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">نُشر في</span>
 
-              <time title="Erstellt: 2021-03-14 16:44:26" itemprop="dateCreated datePublished" datetime="2021-03-14T16:44:26+08:00">2021-03-14</time>
+              <time title="أُنشأ: 2021-03-14 16:44:26" itemprop="dateCreated datePublished" datetime="2021-03-14T16:44:26+08:00">2021-03-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -640,16 +714,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">نُشر في</span>
 
-              <time title="Erstellt: 2020-10-04 17:20:22" itemprop="dateCreated datePublished" datetime="2020-10-04T17:20:22+08:00">2020-10-04</time>
+              <time title="أُنشأ: 2020-10-04 17:20:22" itemprop="dateCreated datePublished" datetime="2020-10-04T17:20:22+08:00">2020-10-04</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -728,16 +802,16 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">نُشر في</span>
 
-              <time title="Erstellt: 2020-09-28 20:02:52" itemprop="dateCreated datePublished" datetime="2020-09-28T20:02:52+08:00">2020-09-28</time>
+              <time title="أُنشأ: 2020-09-28 20:02:52" itemprop="dateCreated datePublished" datetime="2020-09-28T20:02:52+08:00">2020-09-28</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
               </span>
 
           
@@ -814,82 +888,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-hans">
-    <link itemprop="mainEntityOfPage" href="https://iyetux.github.io/2020/09/12/%E4%BA%BA%E5%95%8A%EF%BC%81%E6%B4%BB%E5%BE%97%E7%9C%9F%E6%98%AF%E7%B4%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Iyetux">
-      <meta itemprop="description" content="人不努力和咸鱼有什么区别">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一个相信命运可是又不甘心命运的烂人">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/12/%E4%BA%BA%E5%95%8A%EF%BC%81%E6%B4%BB%E5%BE%97%E7%9C%9F%E6%98%AF%E7%B4%AF/" class="post-title-link" itemprop="url">人啊！活得真是累</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
-
-              <time title="Erstellt: 2020-09-12 23:09:08" itemprop="dateCreated datePublished" datetime="2020-09-12T23:09:08+08:00">2020-09-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Bearbeitet am</span>
-                <time title="Geändert am: 2024-08-26 08:25:45" itemprop="dateModified" datetime="2024-08-26T08:25:45+08:00">2024-08-26</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>人啊！活着到底是为了什么？相信很多人都在思考这个问题。当然很多成功人士没有这样的烦恼，一方面是他们非常明确<br>自己到底为什么活着，另一方面或许他们根本没时间去思考这种问题。这也就是为什么我还在为此事而苦恼着。<br>书上说人活着是为了活得更好，这是物质追求型。有的活着是为了体现自我价值，这个是欲望型。还有的为妻女、父母、为兄弟、朋友。可是就没有为自己而活的吗？为自己而活是否是自私的表现？难道人不应该好好的为自己而活一次吗？人身在世犹如白驹过隙。几十年的光阴转瞬间就过去了。一出生就被迫学这学那，小时候为读书，长大了为工作，为家庭，为事业。又有谁真正懂得什么才是为自己而活着呢？每天重复机械化的忙碌着，没日没夜的工作、学习，人就成了机器人一样。平淡无极的生活，是那么的乏味，虽然平淡可是是那么的压抑。看似普通简单，可是总无法打破这样的生活模式。</p>
-<p>终究是什么使我们变得如此的麻木？生活的乏味难道真的是物质条件、或者是外在的因素造成的吗？</p>
-<p>30岁之前的我真的是那么的肯定，坚信这样的生活并非自己的不努力，而是先天条件决定的。是上一辈没有积累，是上天的不公。可是，随着年龄的增长，慢慢发现。确实有些话是对的。“上天是公平的，它给每个人都是24个小时。”只是有些人合理分配它，而有些人恶意挥霍。虽然说有生老疾病，有些人命苦先天命短。可是并非不公，因为在有限的生命中，同样拥有了24小时。只是这种周期不长，不长的原因有很多，而苦命的人只是命运弄人罢了。</p>
-<p>相较下像我这种生命特征完好的人，却活得这样苟且，又怎么能怨上天的不公呢？或许他人能怨，可是我却不能。因为，很明显被给予的已经够多了，只是自己没好好把握而已。</p>
-<p>与其这样自怨自艾，为何不试着改变呢？无论是工作，还是生活。只有跳出自己的舒适圈，这里的舒适圈并非字面上理解的。例如：躺着舒适、吃得好等等。而是指一切自己认为对，或者别人一直坚持努力的。可是自己总找任何借口不去执行的念头，都叫舒适圈。想改变外界就得从内开始，从自身做起。跳出自己的舒适圈，逼迫他人或许遭人怨，可是逼迫自己，往绝路死路上逼，这才能置之死地而后生。才能使自己得以改变。</p>
-<p>体重过胖，难道就不能早起锻炼？或者下班锻炼？明明查过很多资料保证7个小时的睡眠就足够了。没有时间还是真正自己懒？这个问题多问自己几遍就清楚了。没有装备条件，难道这是必要条件吗？还是自己为自己的懒找的借口？好好的想想，别连自己都在骗自己。</p>
-<p>人为什么要活？为什么而活。其实，问题没那么难。为什么要活，因为来这个世间体验生活，既然是体验，什么都得试试，不要太过于执着或较真。一旦执着那么就会固步自封，一旦较真那一切都是虚无的现实会让你失望落魄。</p>
-<p>所以，有空多走动，多锻炼锻炼自己的身体。为充实自己多看看书，不一定要有明确的方向，看就对了。没有方向？没有喜好？没有关系。这些就是你来到人世间体验寻找的乐趣。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Vorherige Seite"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Nächste Seite"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="الصفحة السابقة"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="الصفحة التالية"></i></a>
   </nav>
 
 
@@ -933,10 +935,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Inhaltsverzeichnis
+          المحتويات
         </li>
         <li class="sidebar-nav-overview">
-          Übersicht
+          عام
         </li>
       </ul>
 
@@ -955,13 +957,13 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">24</span>
-          <span class="site-state-item-name">Artikel</span>
+          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-name">المقالات</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
         <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">schlagwörter</span>
+        <span class="site-state-item-name">الوسوم</span>
       </div>
   </nav>
 </div>
@@ -993,7 +995,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Iyetux</span>
 </div>
-  <div class="powered-by">Erstellt mit  <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
         
